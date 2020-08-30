@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layouts :: head"></head>
+
+<style>
+
+	
+@media screen and (max-width: 990px) {
+	
+	#home-h1{
+	font-size:30px;
+	 font-weight: 900;
+	 
+	 
+	}
+	
+
+
+
+</style>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.12.0/bootstrap-social.min.css">
+
+<nav th:replace="layouts :: header"></nav>
+
+
+<body class="home">
+	
+	
+
+	
+	<div id = "text-main" class="col-5 text-main"   >
+	
+
+	
+	  <h1 id="home-h1">Log into your Account</h1>
+		
+		<div class="container">
+		<div class="login-container">
+		<form action="/login" th:object="${login}" method="POST">
+		
+		<ul class="text-danger" > 
+			<li th:if="${errorMessage}" th:text="${errorMessage}" class="text-danger"></li> 
+			</ul>
+				
+		<div class="alert alert-info" th:if="${successmessage}" th:text="${successmessage}"></div>
+            	<div class="input-group input-group-lg">
+		<label id="label-un">Username</label>
+		
+			<input id="credential_0" type="text" name="username" placeholder="Username or Email" th:field="*{username}"maxlength="255" size="50" > 
+			
+			</div>
+			
+			<div class="input-group input-group-lg">
+			<label id="label-ps">Password</label>
+			<input id="credential_1" type="password" name="password" placeholder="Password" th:field="*{password}" maxlength="45" size="50"  autocomplete="off">
+			
+		</div>
+		<input type="hidden" name="_csrf" th:value="${_csrf.token}">
+		<a   class="forgot-password float-right" href="/forgot-password" data-element-location="body" data-element-type="link" data-element-label="forgot_password" data-qe-id="forgotPasswordTextLink" data-gtm-vis-first-on-screen-380651_847="510" data-gtm-vis-total-visible-time-380651_847="100" data-gtm-vis-has-fired-380651_847="1">Forgot Password?</a>
+		 
+		<div class="buttons mr-auto">
+		
+		<button class="gtm_login btn btn-lg btn-primary btn-block" type="submit" name="submit" id="controlPanelLogin" data-element-location="body" data-element-type="button" data-element-label="login" data-qe-id="controlPanelLogin" data-gtm-vis-first-on-screen-380651_847="523" data-gtm-vis-total-visible-time-380651_847="100" data-gtm-vis-has-fired-380651_847="1">Log in</button>
+				
+		<!--  <button id="google-button" class="btn btn-block btn-social btn-google ">  <i class="fa fa-google"></i> Log in with google  </button>-->
+		<hr></hr>
+		<button  th:formaction="@{/register}" formmethod="GET" class="gtm_signup btn btn-lg btn-primary btn-block" type="submit" id="controlPanelSignup" data-element-location="body" data-element-type="button" data-element-label="signup" data-qe-id="controlPanelSignup" data-gtm-vis-first-on-screen-380651_847="523" data-gtm-vis-total-visible-time-380651_847="100" data-gtm-vis-has-fired-380651_847="1">Sign Up</button>
+		
+		
+		</div>
+		 
+		
+		</form>
+		</div>
+	    </div>
+</div>
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>	
+    <script src="https://cdn.rawgit.com/oauth-io/oauth-js/c5af4519/dist/oauth.js"></script>
+    <script th:src="@{js/hamburger.js}"></script>
+    <script th:src="@{js/google-button.js}"></script>
+
+</body>
+
+</html>

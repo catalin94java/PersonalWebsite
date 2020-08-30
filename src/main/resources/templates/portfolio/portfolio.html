@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layouts :: head"></head>
+
+<style>
+
+	
+@media screen and (max-width: 990px) {
+	
+	#abm-h1{
+	font-size:30px;
+	 font-weight: 900;
+	}
+	
+
+	
+
+</style>
+
+<body>
+	<nav th:replace="layouts :: header"></nav>
+	
+
+	
+<div class="container portfolio-container">
+	
+	<h1 class="heading h1-portfolio">Projects</h1>
+
+	
+    <div class="row">
+    	
+        <div class="col-md-5 project-display" >
+        <h3>Personal Website</h3>
+        	<div class="project-display-poster">
+        <img  th:src="@{/images/pwb-project-min.png}">
+        </div>
+        <div class="row project-display-actions"  >
+        
+        
+        
+        <a style="margin-right: 2.5rem; pointer-events:none;color: rgba(68,151,226,.5);"href="#" ><i  class="fas fa-desktop"></i><span>Live Preview</span></a>
+       
+        
+         <a target="_blank" rel="noopener noreferrer" href="https://github.com/catalin94java"><i  class="fas fa-code-branch"></i><span>View Source</span></a>
+         
+             </div>
+             
+             <div class="col-md-12 project-technologies" ><h5>Technologies Used</h5>
+             
+   
+             
+             	<ul  class=project-technologies-list>
+             	
+             		<li ><i class="fas fa-dot-circle"></i><p>HTML5</p></li>
+             		<li ><i class="fas fa-dot-circle"></i><p>CSS3</p></li>
+             		<li ><i class="fas fa-dot-circle"></i><p>Spring 5</p></li>
+             		<li ><i class="fas fa-dot-circle"></i><p>Spring Boot</p></li>
+             		<li ><i class="fas fa-dot-circle"></i><p>Bootstrap</p></li>
+					<li ><i class="fas fa-dot-circle"></i><p>JQuery</p></li>
+             		<li ><i class="fas fa-dot-circle"></i><p>Thymeleaf</p></li>
+             		<li ><i class="fas fa-dot-circle"></i><p>AWS-EC2</p></li>
+             		<li ><i class="fas fa-dot-circle"></i><p>AWS-RDS</p></li>
+             	
+             	
+             	</ul>
+             
+             </div>
+             
+        </div>
+     
+        <div class="col-md-5 details" ><h5>Overview</h5><p>Personal Website to display my portfolio of work.</p></div>
+        
+       
+    </div>
+    
+    
+    
+     <hr>
+     
+     
+     
+	<div class="row">
+    	
+        <div class="col-md-5 project-display" >
+        <h3>User Login/Register</h3>
+        	<div class="project-display-poster">
+        <img  th:src="@{/images/login-project-min.png}">
+        </div>
+        <div class="row project-display-actions"  >
+        
+        
+        
+        <a target="_blank" rel="noopener noreferrer" style="margin-right: 2.5rem;" href="/login" ><i  class="fas fa-desktop"></i><span>Live Preview</span></a>
+       
+        
+         <a target="_blank" rel="noopener noreferrer" href="https://github.com/catalin94java"><i  class="fas fa-code-branch"></i><span>View Source</span></a>
+         
+             </div>
+             
+             <div class="col-md-12 project-technologies" ><h5>Technologies Used</h5>
+             
+   
+             
+             	<ul  class=project-technologies-list>
+             	
+             		<li ><i class="fas fa-dot-circle"></i><p>HTML5</p></li>
+             		<li ><i class="fas fa-dot-circle"></i><p>CSS3</p></li>
+             		<li ><i class="fas fa-dot-circle"></i><p>Spring Security</p></li>
+             		<li ><i class="fas fa-dot-circle"></i><p>Spring MVC</p></li>
+             		<li ><i class="fas fa-dot-circle"></i><p>Spring Data JPA(Hibernate)</p></li>
+             		<li ><i class="fas fa-dot-circle"></i><p>Spring JMS</p></li>
+             		<li ><i class="fas fa-dot-circle"></i><p>Spring Boot</p></li>
+             		<li ><i class="fas fa-dot-circle"></i><p>Bootstrap</p></li>
+             		<li ><i class="fas fa-dot-circle"></i><p>JQuery</p></li>
+             		<li ><i class="fas fa-dot-circle"></i><p>Thymeleaf</p></li>
+             		<li ><i class="fas fa-dot-circle"></i><p>PostgreSQL</p></li>
+             	
+             	</ul>
+             
+             </div>
+             
+        </div>
+     
+        <div class="col-md-5 details" ><h5>Overview</h5>
+        
+        <p>Secured user authentication and registration method.</p>
+        
+        <div class="col-md-12" style="padding:0 ;margin-top: 35px;" ><h5>Notable features</h5></div>
+        
+        <ul class="project-technologies-list-notable-features">
+        <li><i class="fas fa-dot-circle"></i><p><span class="highlight">Unique</span> account registration.</p></li>
+        <li><i class="fas fa-dot-circle"></i><p>Password <span class="highlight">validation constraints.</span> </p></li>
+        <li><i class="fas fa-dot-circle"></i><p>Account activation functionality through confirmation token via Email.</p></li>
+        <li><i class="fas fa-dot-circle"></i><p>Reset Password functionality through confirmation token via Email.</p></li>
+        <li><i class="fas fa-dot-circle"></i><p>Only CSRF token HTTP Requests.</p></li>
+        
+        </ul>
+        
+        
+        </div>
+        
+       
+    </div>
+   	 
+	</div>	
+
+	<footer th:replace="layouts :: footer"></footer>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>	
+    <script th:src="@{js/hamburger.js}"></script>
+</body>
+
+</html>

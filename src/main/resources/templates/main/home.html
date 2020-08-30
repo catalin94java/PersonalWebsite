@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layouts :: head"></head>
+
+<style type="text/css">
+
+		
+	
+	@media screen and (max-width:500px){
+
+
+	
+	.text-animation-home-span{
+	
+	font-size: 45%!important;
+	
+	}
+	
+	
+	
+
+	}
+	
+	@media screen and (max-width:400px){
+
+
+
+
+	.home-container img{
+	width:100%;
+    height:420px;
+    object-fit: contain;
+    object-position: center;
+	
+	}
+	
+	.home-container{
+	
+
+
+	height:440px;
+	}
+	
+	.text-animation-home-span{
+	
+	font-size: 45%!important;
+	
+	}
+	
+	
+	
+
+	}
+	
+	@media screen and (max-width:350px){
+
+
+
+
+	.text-animation-home-span{
+	
+	font-size: 35%!important;
+	
+	}
+	
+	
+	
+
+	}
+	
+	@media screen and (max-width:300px) and (max-height:700px){
+
+
+
+
+	.text-animation-home-span{
+	
+	font-size: 5%!important;
+	
+	}
+	
+	.text-animation-home{
+	
+	font-size: 5%!important;
+	line-height: 1.2;
+	top:35%!important;
+	}
+	
+	
+		.home-container img{
+	width: 100%;
+    height: 490px;
+    object-fit: contain;
+    object-position: center;
+	
+	}
+	
+	.home-container{
+	
+
+
+	height:460px;
+	}
+
+	}
+
+
+	@media screen and (min-width: 401px){
+
+
+
+
+	.home-container img{
+	width: 100%;
+    height: 520px;
+    object-fit: contain;
+    object-position: center;
+	
+	}
+	
+	.home-container{
+	
+
+
+	height:580px;
+	}
+	
+
+	}
+	
+	@media screen and (min-width: 1200px) and (max-height: 750px)  {
+
+
+
+
+	.home-container img{
+	width: 100%;
+    height: 480px;
+    object-fit: contain;
+    object-position: center;
+	
+	}
+	
+	.home-container{
+	
+
+
+	height:480px;
+	}
+	
+
+	}
+	
+	
+		
+	
+	@media screen and (min-height: 815px){
+
+
+
+
+	.home-container img{
+	width: 100%;
+    height: 580px;
+    object-fit: contain;
+    object-position: center;
+	
+	}
+	
+	.home-container{
+	
+
+
+	height:580px;
+	}
+	
+
+	}
+	
+	@media screen and (min-height: 812px){
+
+
+
+
+	.home-container img{
+	width: 100%;
+    height: 580px;
+    object-fit: contain;
+    object-position: center;
+	
+	}
+	
+	.text-animation-home{
+	top:20%!important;
+	}
+	
+	.home-container{
+	
+
+
+	height:620px;
+	}
+	
+
+	}
+	@media screen and (min-height: 830px){
+
+
+
+
+	.home-container img{
+	width: 100%;
+    height: 590px;
+    object-fit: contain;
+    object-position: center;
+	
+	}
+	
+	.home-container{
+	
+
+
+	height:640px;
+	}
+	
+
+	}
+	
+	@media screen and (min-width: 768px) and (min-height: 1024px){
+
+
+
+
+	.home-container img{
+	width: 100%;
+    height: 780px;
+    object-fit: contain;
+    object-position: center;
+	
+	}
+	
+	.home-container{
+	
+
+
+	height:780px;
+	}
+	
+
+	}
+	
+	
+	
+	@media screen and (min-height: 1366px){
+
+
+
+
+	.home-container img{
+	width: 100%;
+    height: 1100px;
+    object-fit: contain;
+    object-position: center;
+	
+	}
+	
+	.home-container{
+	
+
+
+	height:1160px;
+	}
+	
+
+	}
+	
+
+
+	@media screen and (min-height: 835px) and (min-width: 1300px)  {
+
+
+
+
+	.home-container img{
+	width: 100%;
+    height: 80vh ;
+    object-fit: contain;
+    object-position: center;
+	
+	}
+	
+	.home-container{
+	
+
+
+	height:auto;
+	}
+	
+
+	}
+	
+	
+
+</style>
+
+
+<nav th:replace="layouts :: header"></nav>
+
+
+<body class="home" >
+	
+	<div class="container" style="position: relative;">
+	
+	<div class="container-fluid  home-container" style="position: relative; text-align: center;" >
+    
+  
+    
+     <img class="img-fluid home-photo py-5"  th:src="@{/images/laptop-home-min-min.png}"  /> 
+     
+     <div  class="text-animation-home" >
+     
+     <div class="content-editable" contenteditable=false >
+     <form th:action="@{/portfolio}" method="POST">
+     <span class="text-animation-home-span" >Hi, I am Catalin, type y and hit enter to see my work:</span>
+     
+      <input id="credential_6" type="text" th:name="y"   maxlength="1" size="1" value="" autofocus>
+      
+      <input type="submit" hidden=true/>
+      </form>
+      </div>
+     <!--  <input  id="credential_6" type="text" style="border: none;outline:none;background-color: black;color: aqua;word-wrap: break-word" maxlength="1" size="1" value=""> -->
+     
+     </div>
+    
+    </div>
+    
+     
+</div>
+	
+	
+ 
+	<button th:action hidden>this</button>
+	
+	
+
+<footer th:replace="layouts :: footer"></footer>
+
+
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    	
+    <script th:src="@{js/hamburger.js}"></script>
+   	
+
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layouts :: head"></head>
+
+
+<style>
+
+	
+@media screen and (max-width: 990px) {
+	
+	#abm-h1{
+	font-size:30px;
+	 font-weight: 900;
+	}
+	
+
+
+
+</style>
+
+
+<nav th:replace="layouts :: header"></nav>
+
+<body>
+
+	<div class="container">
+	<div id = "text-main-about-me" class=" text-main"   >
+	<div >
+	<h1 id="abm-h1">About me</h1>
+	<p id="abm-intro">I am a self-taught Java Software Developer based in Bucharest, Romania.</p>
+	<h5>Base knowledge</h5>
+	<p id="abm-description"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Back-end development is my main focus, but I am also making my way through front-end development.</p>
+	<h5>Drive</h5>
+	<p id="abm-description"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I am fueled by my passion of persistently building my shelf of knowledge, with the purpose of creating useful applications for me and for customers. My most recent shelf element is being represented by Spring 5 framework.</p>
+	<h5>Objective</h5>
+	<p id="abm-description"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I am actively pursuing a role as a Java Software Developer where I and my team can take on daily programming challenges which will help me deepen my field of expertise, and gain valuable experience for me and my fellowship.</p>
+	<h5>Belief</h5>
+	<p id="abm-description"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The majority of people stack accomplishments by hard work and dedication. </p>
+	<h5>Recreation</h5>
+	<p id="abm-description"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When I am not working on my apps, you'll find me travelling to new places, playing chess or watching mind-twisting series. </p>
+	    </div>
+	</div>
+	</div>
+	
+	<footer th:replace="layouts :: footer" ></footer>
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>	
+    <script th:src="@{js/hamburger.js}"></script>
+</body>
+
+</html>
